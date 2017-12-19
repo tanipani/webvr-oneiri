@@ -1,11 +1,33 @@
 <html>
 	<head>
 		<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
 	</head>
 	<body>
-		<a-scene>
+		<!-- <a-scene>
 			<a-sky src="room.jpg" rotation="0 -130 0"></a-sky>
-			<!-- <a-text value="" position="-1.026 1.719 -1.062" text="color:#912f2f;width:8.79"></a-text> -->
-		</a-scene>
+			<a-text value="Test" position="-1.026 1.719 -1.062" text="color:#912f2f;width:8.79"></a-text>
+		</a-scene> -->
+		<a-scene>
+			 <rw-room position="-2 0 -2" material="color:#866">
+				 <rw-floor material="color:#888"></rw-floor>
+				 <rw-ceiling material="color:#888"></rw-ceiling>
+					 <rw-wall position="4 0 0"></rw-wall>
+					 <rw-wall position="4 0 4"></rw-wall>
+					 <rw-wall position="0 0 4"></rw-wall>
+					 <rw-wall position="0 0 0">
+						 <rw-doorhole id="holeA"></rw-doorhole>
+						 <rw-doorlink from="#holeA" to="#holeB" position="2.5 0 0"></rw-doorlink>
+					 </rw-wall>
+			 </rw-room>
+			 <rw-room position="0 0 -3">
+					 <rw-wall position=" 1 0 -1" material="color:#787"></rw-wall>
+					 <rw-wall position=" 1 0  1" material="color:#877">
+							 <rw-doorhole id="holeB"></rw-doorhole>
+					 </rw-wall>
+					 <rw-wall position="-1 0  1" material="color:#878"></rw-wall>
+					 <rw-wall position="-1 0 -1" material="color:#778"></rw-wall>
+			 </rw-room>
+	 </a-scene>
 	</body>
 </html>
