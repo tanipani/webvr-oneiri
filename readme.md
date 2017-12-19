@@ -9,3 +9,15 @@ Start the http server with `http-server` for that the npm package must be instal
 
 ### A-frame
 Start the visual a-frame example with `ctrl+alt+i`
+
+## Ressources
+
+[A-Frame Documentation](https://aframe.io/docs/0.7.0/introduction/)
+
+### Where to Find 3D Models
+
+- [Sketchfab](https://sketchfab.com)
+- [Clara.io](http://clara.io)
+- [Archive3D](http://archive3d.net)
+- [Sketchup's 3D Warehouse](https://3dwarehouse.sketchup.com)
+- [TurboSquid](http://www.turbosquid.com/Search/3D-Models/free)
