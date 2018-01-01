@@ -7,6 +7,14 @@
 
 <body>
 	<a-scene>
+
+
+
+		<!-- ASSETS (3D-Models) -->
+		<a-assets>
+	    <a-asset-item id="DNA" src="assets/dna.gltf"></a-asset-item>
+	  </a-assets>
+
 		<!-- ONEIRI ROOM -->
 		<rw-room position="0 0 -1" material="color:#866">
 			<rw-floor material="color:#888"></rw-floor>
@@ -18,6 +26,11 @@
 				<rw-doorhole id="holeA"></rw-doorhole>
 				<rw-doorlink from="#holeA" to="#holeB" position="5.5 0 1"></rw-doorlink>
 			</rw-wall>
+
+			<a-entity position="0 1 -2" scale="0.01 0.01 0.01" gltf-model="#DNA"></a-entity>
+
+
+
 		</rw-room>
 		<!-- SPAWN POINT -->
 		<rw-room position="0 0 0" material="color:#866">
