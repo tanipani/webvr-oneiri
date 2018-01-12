@@ -17,7 +17,7 @@ var scene = document.querySelector('a-scene').object3D;
 
 // var loader = new THREE.OBJLoader();
 var loader = new THREE.ObjectLoader();
-loader.load('assets/sg-shiled-3.json', function(object) {
+/*loader.load('assets/sg-shiled-3.json', function(object) {
 
   // if you want to add your custom material
   var materialObj = new THREE.MeshBasicMaterial({
@@ -38,7 +38,7 @@ loader.load('assets/sg-shiled-3.json', function(object) {
 
   // then directly add the object
   scene.add(object);
-});
+});*/
 loader.load('assets/sg-sword-13.json', function(object) {
 
   // if you want to add your custom material
