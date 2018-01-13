@@ -29,27 +29,32 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 			<img src="assets/textures/wood_floor.jpg" id="woodFloor" />
 			<img src="assets/textures/wood_wall.jpg" id="woodWall" />
 
-			<img src="assets/ramesses_1/head_r1.png" id="r1ImageS1" />
-			<img src="assets/ramesses_1/r1_text_for_head.jpg" id="r1TextS1" />
-			<img src="assets/ramesses_1/Ramses_I.jpg" id="r1ImageS2" />
-			<img src="assets/ramesses_1/r1_origins.jpg" id="r1TextS2" />
-			<img src="assets/ramesses_1/Abydos_chapel_reliefs_r1.jpg" id="r1ImageS3" />
-			<img src="assets/ramesses_1/r1_death.jpg" id="r1TextS3" />
-			<img src="assets/ramesses_1/rediscovery_repatriation.jpg" id="r1ImageS4" />
-			<img src="assets/ramesses_1/r1_rediscovery_and_repatriation.jpg" id="r1TextS4" />
+			<img src="assets/ramesses_1/r1images1.png" id="r1ImageS1" />
+			<img src="assets/ramesses_1/r1texts1.jpg" id="r1TextS1" />
+			<img src="assets/ramesses_1/r1images2.jpg" id="r1ImageS2" />
+			<img src="assets/ramesses_1/r1texts2.jpg" id="r1TextS2" />
+			<img src="assets/ramesses_1/r1images3.jpg" id="r1ImageS3" />
+			<img src="assets/ramesses_1/r1texts3.jpg" id="r1TextS3" />
+			<img src="assets/ramesses_1/r1images4.jpg" id="r1ImageS4" />
+			<img src="assets/ramesses_1/r1texts4.jpg" id="r1TextS4" />
 
-			<a-asset-item id="r2Temple" src="assets/models/temple_r2/scene.gltf"></a-asset-item>
-			<img src="assets/ramesses_2/Ramesses_II_as_child.jpg" id="r2AsChild" />
-			<img src="assets/ramesses_2/Ramesseum_siege_of_Dapur.jpg" id="r2SiegeDapur" />
-			<img src="assets/ramesses_2/Ramses_IIs_war_nordic.png" id="r2WarNordic" />
-			<img src="assets/ramesses_2/RamsesIIHead.jpg" id="r2Head" />
-			<img src="assets/ramesses_2/Temple_of_Derr_relief_of_Ramesses_II.jpg" id="r2TempleRelief" />
-			<img src="assets/ramesses_2/Rameses_II_in_the_Battle_of_Khadesh.jpg" id="r2BAttleKhadesh" />
+			<img src="assets/ramesses_2/r2images1.jpg" id="r2ImageS1" />
+			<img src="assets/ramesses_2/r2texts1.jpg" id="r2TextS1" />
+			<img src="assets/ramesses_2/r2images2.jpg" id="r2ImageS2" />
+			<img src="assets/ramesses_2/r2texts2.jpg" id="r2TextS2" />
+			<img src="assets/ramesses_2/r2images3.png" id="r2ImageS3" />
+			<img src="assets/ramesses_2/r2texts3.jpg" id="r2TextS3" />
+			<img src="assets/ramesses_2/r2images4.jpg" id="r2ImageS4" />
+			<img src="assets/ramesses_2/r2texts4.jpg" id="r2TextS4" />
 
-			<img src="assets/ramesses_3/KhonsuTemple-Karnak-RamessesIII.jpg" id="r3" />
-			<img src="assets/ramesses_3/Medinet_Haboe_Reliëf.jpg" id="r3" />
-			<img src="assets/ramesses_3/Louvre_egyptologie.jpg" id="r3" />
-			<img src="assets/ramesses_3/Weihrauchopfer_RamsesIII_aus_KV11.jpg" id="r3" />
+			<img src="assets/ramesses_3/r3images1.jpg" id="r3ImageS1" />
+			<img src="assets/ramesses_3/r3texts1.jpg" id="r3TextS1" />
+			<img src="assets/ramesses_3/r3images2.jpg" id="r3ImageS2" />
+			<img src="assets/ramesses_3/r3texts2.jpg" id="r3TextS2" />
+			<img src="assets/ramesses_3/r3images3.jpg" id="r3ImageS3" />
+			<img src="assets/ramesses_3/r3texts3.jpg" id="r3TextS3" />
+			<img src="assets/ramesses_3/r3images4.jpg" id="r3ImageS4" />
+			<img src="assets/ramesses_3/r3texts4.jpg" id="r3TextS4" />
 
 			<a-asset-item id="r4Statue" src="assets/models/ramesses_4/scene.gltf"></a-asset-item>
 			<img src="assets/ramesses_4/Karnak_Khonsou.jpg" id="r4" />
@@ -77,39 +82,40 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 			<rw-wall material="src:#woodWall; opacity:0.0; repeat:0.5 0.5" position="7 0 7"></rw-wall>
 			<rw-wall material="src:#woodWall; opacity:0.0; repeat:0.5 0.5" position="-7 0 7"></rw-wall>
 
-			<a-box position="0 5 0" height="0.5" width="0.5" depth="0.5" rotation="0 45 0" color="#4CC3D9" id="clickerR1"></a-box>
+			<a-box position="0.5 5 0" height="0.5" width="0.5" depth="0.5" rotation="0 45 0" color="#4CC3D9" id="clickerOuter"></a-box>
+			<a-box position="-0.5 5 0" height="0.5" width="0.5" depth="0.5" rotation="0 45 0" color="#3DDB50" id="clickerInner"></a-box>
 
 			<!-- TOP LEFT S1-->
-			<a-entity id="S1ImageA" position="-4 1.2 -5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS1"></a-entity>
-			<a-entity id="S1TextA" position="-5 1.2 -4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS1"></a-entity>
+			<a-entity id="S1ImageOuter" position="-4 1.2 -5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS1"></a-entity>
+			<a-entity id="S1TextOuter" position="-5 1.2 -4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS1"></a-entity>
 
 			<!-- TOP RIGHT S3-->
-			<a-entity position="4 1.2 -5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS3"></a-entity>
-			<a-entity position="5 1.2 -4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS3"></a-entity>
+			<a-entity id="S3ImageOuter" position="4 1.2 -5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS3"></a-entity>
+			<a-entity id="S3TextOuter" position="5 1.2 -4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS3"></a-entity>
 
 			<!-- BOTTOM RIGHT S4 -->
-			<a-entity position="4 1.2 5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS4"></a-entity>
-			<a-entity position="5 1.2 4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS4"></a-entity>
+			<a-entity id="S4ImageOuter" position="4 1.2 5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS4"></a-entity>
+			<a-entity id="S4TextOuter" position="5 1.2 4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS4"></a-entity>
 
 			<!-- BOTTOM LEFT S2 -->
-			<a-entity position="-4 1.2 5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS2"></a-entity>
-			<a-entity position="-5 1.2 4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS2"></a-entity>
+			<a-entity id="S2ImageOuter" position="-4 1.2 5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS2"></a-entity>
+			<a-entity id="S2TextOuter" position="-5 1.2 4" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS2"></a-entity>
 
 			<!-- MIDDLE TOP LEFT S4-->
-			<a-entity position="-2 1.2 -3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS4"></a-entity>
-			<a-entity position="-3 1.2 -2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS4"></a-entity>
+			<a-entity id="S4ImageInner" position="-2 1.2 -3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS4"></a-entity>
+			<a-entity id="S4TextInner" position="-3 1.2 -2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS4"></a-entity>
 
 			<!-- MIDDLE TOP RIGHT S2-->
-			<a-entity position="2 1.2 -3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS2"></a-entity>
-			<a-entity position="3 1.2 -2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS2"></a-entity>
+			<a-entity id="S2ImageInner" position="2 1.2 -3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS2"></a-entity>
+			<a-entity id="S2TextInner" position="3 1.2 -2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS2"></a-entity>
 
 			<!-- MIDDLE BOTTOM RIGHT S1 -->
-			<a-entity position="2 1.2 3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS1"></a-entity>
-			<a-entity position="3 1.2 2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS1"></a-entity>
+			<a-entity id="S1ImageInner" position="2 1.2 3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS1"></a-entity>
+			<a-entity id="S1TextInner" position="3 1.2 2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS1"></a-entity>
 
 			<!-- MIDDLE BOTTOM LEFT S3-->
-			<a-entity position="-2 1.2 3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS3"></a-entity>
-			<a-entity position="-3 1.2 2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS3"></a-entity>
+			<a-entity id="S3ImageInner" position="-2 1.2 3" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS3"></a-entity>
+			<a-entity id="S3TextInner" position="-3 1.2 2" rotation="0 90 0" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1TextS3"></a-entity>
 
 		</rw-room>
 		<a-sky rotation='0 0 0' id='my360' src='#skyDefault'></a-sky>
@@ -118,7 +124,10 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 
 
 	<script type="text/javascript">
-		let scaled = {};
+		let currentState = {
+			outer: 1,
+			inner: 1
+		};
 
 		function nextScene() {
 			console.log('asdasd');
@@ -134,28 +143,140 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 			}
 		}
 
-		function scaleEntity(ent, name) {
-			if (scaled[name]) {
-				ent.setAttribute('scale', '0.2 0.2 0.2');
-			} else {
-				ent.setAttribute('scale', '0.4 0.4 0.4');
+		function updateOuter() {
+			let ramsis = 'r1';
+			switch (currentState.outer) {
+				case 1:
+					ramsis = 'r2';
+					currentState.outer = 2;
+					break;
+				case 2:
+					ramsis = 'r3';
+					currentState.outer = 3;
+					break;
+				case 3:
+					ramsis = 'r1';
+					currentState.outer = 1;
+					break;
+				default:
+					ramsis = 'r1';
+					currentState.outer = 1;
 			}
+			document.getElementById("S1ImageOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS1'
+			});
+			document.getElementById("S1TextOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS1'
+			});
+			document.getElementById("S2ImageOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS2'
+			});
+			document.getElementById("S2TextOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS2'
+			});
+			document.getElementById("S3ImageOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS3'
+			});
+			document.getElementById("S3TextOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS3'
+			});
+			document.getElementById("S4ImageOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS4'
+			});
+			document.getElementById("S4TextOuter").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS4'
+			});
 		}
 
-		function testUpdate() {
-			console.log('TEST2');
-			// document.getElementById("S1ImageA").material = "color: white; shader: flat; src:#r2AsChild";
-			myAnchor.parentNode.replaceChild(mySpan, myAnchor);
+		function updateInner() {
+			let ramsis = 'r1';
+			switch (currentState.inner) {
+				case 1:
+					ramsis = 'r2';
+					currentState.inner = 2;
+					break;
+				case 2:
+					ramsis = 'r3';
+					currentState.inner = 3;
+					break;
+				case 3:
+					ramsis = 'r1';
+					currentState.inner = 1;
+					break;
+				default:
+					ramsis = 'r1';
+					currentState.inner = 1;
+			}
+			document.getElementById("S1ImageInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS1'
+			});
+			document.getElementById("S1TextInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS1'
+			});
+			document.getElementById("S2ImageInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS2'
+			});
+			document.getElementById("S2TextInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS2'
+			});
+			document.getElementById("S3ImageInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS3'
+			});
+			document.getElementById("S3TextInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS3'
+			});
+			document.getElementById("S4ImageInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'ImageS4'
+			});
+			document.getElementById("S4TextInner").setAttribute('material', {
+				color: 'white',
+				shader: 'flat',
+				src: '#' + ramsis + 'TextS4'
+			});
 		}
+
 
 		document.getElementById('clicker').addEventListener('click', function(evt) {
 			nextScene();
 		});
-		document.getElementById('clickerR1').addEventListener('click', function(evt) {
-			console.log('TEST1');
-			testUpdate();
+		document.getElementById('clickerOuter').addEventListener('click', function(evt) {
+			console.log('UPDATE OUTER');
+			updateOuter();
 		});
-
+		document.getElementById('clickerInner').addEventListener('click', function(evt) {
+			console.log('UPDATE Inner');
+			updateInner();
+		});
 	</script>
 
 </body>
