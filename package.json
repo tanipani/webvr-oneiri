@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/tanipani/webvr-oneiri#readme",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server -c -1"
   }
 }
