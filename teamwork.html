@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+		<script src="node_modules/aframe/dist/aframe.js"></script>
+		<script src="node_modules/aframe-room-component/dist/aframe-room-component.min.js"></script>
+	</head>
+
+	<body>
+		<a-scene>
+			<a-camera>
+				<a-cursor></a-cursor>
+			</a-camera>
+
+			<!-- A-frame assets -->
+			<a-assets>
+				<a-asset-item id="bridge-obj" src="/assets/a-bridge-obj/a-bridge.obj"></a-asset-item>
+				<a-asset-item id="bridge-mtl" src="/assets/a-bridge-obj/a-bridge.mtl"></a-asset-item>
+			</a-assets>
+
+			<!-- Room setup -->
+			<rw-room position="0 0 2" class="scene1">
+				<rw-floor material="color:white; repeat:0.5 0.5"></rw-floor>
+				<rw-ceiling material="color:white; repeat:0.5 0.5"></rw-ceiling>
+				<rw-wall material="color:pink" position="-5 0 -5"></rw-wall>
+				<rw-wall material="color:pink" position="5 0 -5"></rw-wall>
+				<rw-wall material="color:pink" position="5 0 5"></rw-wall>
+				<rw-wall material="color:pink" position="-5 0 5"></rw-wall>
+			</rw-room>
+
+			<!-- Bridge entity -->
+			<a-entity obj-model="obj: #bridge-obj; mtl: #bridge-mtl" position="-1 0.5 -3" scale="0.01 0.01 0.01"></a-entity>
+
+		</a-scene>
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="teamwork.js"></script>
+	</body>
+</html>
