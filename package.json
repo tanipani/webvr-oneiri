@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/tanipani/webvr-oneiri/issues"
   },
-  "homepage": "https://github.com/tanipani/webvr-oneiri#readme"
+  "homepage": "https://github.com/tanipani/webvr-oneiri#readme",
+  "scripts": {
+    "start": "http-server"
+  }
 }
