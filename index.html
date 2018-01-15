@@ -1,8 +1,9 @@
 <html>
 
 <head>
-	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-	<script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
+	<script src="node_modules/aframe/dist/aframe.js"></script>
+	<script src="node_modules/aframe-extras/aframe-extras.js"></script>
+	<script src="node_modules/aframe-room-component/dist/aframe-room-component.min.js"></script>
 </head>
 <!--
 MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by laurashea(https://sketchfab.com/laurashea) is licensed under CC Attribution-NonCommercial-ShareAlike(http://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -11,12 +12,6 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 
 <body>
 	<a-scene>
-
-		<a-camera>
-			<a-cursor></a-cursor>
-		</a-camera>
-
-
 		<!-- ASSETS (3D-Models) -->
 		<a-assets>
 
@@ -59,7 +54,20 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 			<a-asset-item id="r4Statue" src="assets/models/ramesses_4/scene.gltf"></a-asset-item>
 			<img src="assets/ramesses_4/Karnak_Khonsou.jpg" id="r4" />
 			<img src="assets/ramesses_4/RamessesIV_SmitingHisEnemiesOnAnOstracon.jpg" id="r4" />
+
+			<a-mixin id="checkpoint"></a-mixin>
+			<a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
+
 		</a-assets>
+
+		<a-camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+			<a-cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader:flat;">
+			</a-cursor>
+		</a-camera>
+
+		<!-- <a-camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+			<a-cursor></a-cursor>
+		</a-camera> -->
 
 		<!-- ONEIRI ROOM -->
 		<!-- SCENE 1 -->
@@ -84,6 +92,26 @@ MH 1997.26.2(https://sketchfab.com/models/0568746295de4aa5886a38ad811be600) by l
 
 			<a-box position="0.5 5 0" height="0.5" width="0.5" depth="0.5" rotation="0 45 0" color="#4CC3D9" id="clickerOuter"></a-box>
 			<a-box position="-0.5 5 0" height="0.5" width="0.5" depth="0.5" rotation="0 45 0" color="#3DDB50" id="clickerInner"></a-box>
+
+			<!-- checkpoints -->
+			<a-entity position="0 0 0">
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="0 0 0" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="4 0 0" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-4 0 0" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="0 0 4" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="0 0 -4" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="4 0 -4" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-4 0 -4" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="4 0 4" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-4 0 4" color="#39BB82"></a-cylinder>
+
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="2 0 -2" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-2 0 -2" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="2 0 2" color="#39BB82"></a-cylinder>
+				<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-2 0 2" color="#39BB82"></a-cylinder>
+
+
+			</a-entity>
 
 			<!-- TOP LEFT S1-->
 			<a-entity id="S1ImageOuter" position="-4 1.2 -5" geometry="primitive: box; height: 2; depth: 0.05; width: 1.5" material="color: white; shader: flat; src:#r1ImageS1"></a-entity>
