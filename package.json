@@ -4,6 +4,7 @@
   "description": "Demonstration project for the concept of *ONEIRI* implemented with `a-frame`.",
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-extras": "^3.13.1",
     "obj2gltf": "^2.1.0",
     "three": "^0.89.0"
   },
