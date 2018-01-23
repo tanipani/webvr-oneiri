@@ -3,6 +3,10 @@
 Demonstration project for the concept of *ONEIRI* implemented with `a-frame`.
 
 ## How to run
+- run `npm install`
+- run `http-server` or an other http-server to run the project in the browser
+- visit locahost:8080 to view the project
+
 
 ### Server
 Start the http server with `http-server` for that the npm package must be installed. To do so run `npm install -g http-server`
