@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<script src="./../node_modules/aframe/dist/aframe.js"></script>
+	<script src="./../node_modules/aframe-extras/dist/aframe-extras.min.js"></script>
+	<script src="./../node_modules/aframe-room-component/dist/aframe-room-component.min.js"></script>
+</head>
+
+	<body>
+		<a-scene>
+      <!-- Light -->
+      <a-entity position="-0.049 0 0.922" light="type:ambient;angle:60.01"></a-entity>
+      <!-- Camera setup -->
+
+      <!-- <a-entity position="0.77 -0.2 4.587" rotation="0 5 0">
+        <a-camera>
+  				<a-cursor></a-cursor>
+  			</a-camera>
+      </a-entity> -->
+			<a-camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+				<a-cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader:flat;">
+				</a-cursor>
+			</a-camera>
+
+			<a-assets>
+				<a-asset-item id="bridge-obj" src="assets/a-bridge-obj/a-bridge.obj"></a-asset-item>
+				<a-asset-item id="bridge-mtl" src="assets/a-bridge-obj/a-bridge.mtl"></a-asset-item>
+
+        <img id="lighter-blue" src="assets/wall-textures/lighter-blue.png">
+        <img id="wooden-light" src="assets/floors/wooden-light.png">
+			</a-assets>
+
+			<!-- Room setup -->
+			<rw-room position="0 0 2" height="4" class="scene1">
+				<rw-floor material="src: #wooden-light; repeat: 0.6 0.6; opacity: 0.6"></rw-floor>
+				<rw-ceiling material="color: #b2bdcc"></rw-ceiling>
+				<rw-wall material="src: #lighter-blue; repeat: 0.1 0.25" position="-5 0 -5"></rw-wall>
+				<rw-wall material="src: #lighter-blue; repeat: 0.1 0.25" position="5 0 -5"></rw-wall>
+				<rw-wall material="src: #lighter-blue; repeat: 0.1 0.25" position="5 0 5"></rw-wall>
+				<rw-wall material="src: #lighter-blue; repeat: 0.1 0.25" position="-5 0 5"></rw-wall>
+
+				<!-- checkpoints -->
+				<a-entity position="0 0 0">
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="0 0 0" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="4 0 0" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-4 0 0" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="0 0 4" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="0 0 -4" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="4 0 -4" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-4 0 -4" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="4 0 4" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-4 0 4" color="#39BB82"></a-cylinder>
+
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="2 0 -2" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-2 0 -2" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="2 0 2" color="#39BB82"></a-cylinder>
+					<a-cylinder checkpoint="offset: 0 1.5 0" radius="0.7" height="0.1" position="-2 0 2" color="#39BB82"></a-cylinder>
+
+
+				</a-entity>
+
+			</rw-room>
+
+      <a-entity text="value: ONEIRI; color: #474747;" scale="14 14 14" position="5.5 2.1 -2.5"></a-entity>
+      <a-entity text="value: mixed reality; color: #474747;" scale="7 7 7" position="3.5 1.6 -2.5"></a-entity>
+
+			<!-- Bridge entity -->
+      <a-box position="0 0.25 0" material="color: #ededed; opacity: 0.7" depth="1" height="0.5" width="2"></a-box>
+			<a-entity obj-model="obj: #bridge-obj; mtl: #bridge-mtl" position="0.409 1 -1.604" scale="0.005 0.005 0.005" model-opacity="0.9" ></a-entity>
+
+		</a-scene>
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="teamwork.js"></script>
+	</body>
+</html>
