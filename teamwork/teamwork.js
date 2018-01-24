@@ -20,3 +20,8 @@ AFRAME.registerComponent('model-opacity', {
     });
   }
 });
+
+
+document.querySelector('a-scene').addEventListener('enter-vr', function () {
+   document.getElementById('cam-entity').setAttribute('position', '0 -1.8 0');
+});
