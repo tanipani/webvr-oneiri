@@ -1,11 +1,10 @@
 <html>
 
 <head>
-	<script src="./../node_modules/aframe/dist/aframe.js"></script>
-	<!-- <script src="../assets/scripts/aframe-master.min.js"></script>
-	<script src="../assets/scripts/aframe-master.min.js.map"></script> -->
-	<script src="./../node_modules/aframe-extras/dist/aframe-extras.min.js"></script>
-	<script src="./../node_modules/aframe-room-component/dist/aframe-room-component.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
+
 </head>
 
 	<body>
@@ -13,13 +12,6 @@
 			<!-- Light -->
 			<a-entity position="-0.049 0 0.922" light="type:ambient;angle:60.01"></a-entity>
 			<!-- Camera setup -->
-
-			<!-- <a-entity position="0.77 -0.2 4.587" rotation="0 5 0">
-				<a-camera>
-					<a-cursor></a-cursor>
-				</a-camera>
-			</a-entity> -->
-
 			<a-entity id="cam-entity" position="0 -0.2 0" rotation="0 5 0">
 				<a-camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
 					<a-cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader:flat;">
